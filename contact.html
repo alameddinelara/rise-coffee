@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head><!-- The head is a container for information ABOUT the page.
+           Nothing in here appears on the page. The browser reads it, the visitor never sees it. -->
+
+	<!-- Which character set to use. Leave this out and apostrophes turn into garbage. -->
+	<meta charset="utf-8">
+	<!-- Tells a phone to use its real width instead of pretending to be a desktop. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The browser tab text, and what Google shows in search results. Not a heading on the page. -->
+	<title>Contact | Rise Coffee</title>
+
+	<!-- STYLES: normalize first, then layout, then style.
+	     General to specific. When two rules clash, the later one wins. -->
+	<link rel="stylesheet" href="normalize.css"> <!-- Irons out browser default settings. -->
+	<link rel="stylesheet" href="layout.css"> <!-- This controls our structure and layout. -->
+	<link rel="stylesheet" href="style.css"> <!-- This is where we style the elements of the page. -->
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body><!-- The body holds everything the visitor actually SEES. -->
+
+	<!-- HEADER: the strip along the top. It is the same on every page of the site,
+	     which is why it lives outside <main>. -->
+	<header>
+		<!-- LOGO -->
+		<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+
+		<!-- NAVIGATION: a menu is a LIST of related links, so it is marked up as a ul with li inside.
+		     CSS takes the bullets off, but underneath it stays a list, because that is what it is. -->
+		<nav>
+			<ul>
+				<li><a class="nav-link" href="index.html>Home</a></li>
+				<li><a class="nav-link" href="about.html">About</a></li>
+				<li><a class="nav-link" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- The # in this href jumps to the element with id="visit" further down THIS page,
+		     instead of opening a different page. -->
+		<a href="#visit" class="nav-link">Visit Us</a>
+	</header>
+
+	<!-- MAIN: everything between the header and the footer. This is the part that is
+	     actually THIS page. One <main> per page. -->
+	<main>
+		<form class="contact-form">
+		  <div class="field">
+		    <label for="FullName">Full Name</label>
+		    <input type="text" id="FullName" class="input-text">
+		  </div>
+		  <div class="field">
+		    <label for="Email">Email</label>
+		    <input type="text" id="Email" class="input-text">
+		  </div>
+		  <div class="field field-wide">
+		    <label for="Message">Message</label>
+		    <textarea id="Message" class="input-message"></textarea>
+		  </div>
+		  <input type="submit" value="Send" class="button-secondary form-submit">
+		</form>
+	</main>
+
+
+	<!-- FOOTER: three equal columns. Same shape as the known for section,
+	     4 + 4 + 4 = 12. The footer sits outside <main> because it repeats
+	     on every page, exactly like the header. -->
+	<footer class="section-padding background-maroon">
+		<div class="container">
+
+			<!-- ROW -->
+			<div class="row">
+
+				<!-- COLUMN 1 -->
+				<div class="col col-lg-4">
+					<a href="index.html"><img src="images/rise-logo.svg" style="width:120px;" alt="rise logo"></a>
+					<p class="text-white">© 2026 Rise Coffee</p>
+					<a href="#" class="nav-link">Privacy Policy</a>
+					<a href="#" class="nav-link">Terms</a>
+				</div>
+
+				<!-- COLUMN 2 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Get in Touch</h2>
+					<p class="text-white">780-939-5224</p>
+					<p class="text-white">hello@risecoffee.com</p>
+					<p class="text-white">304 Main St<br>Wellington, ON  K0K 3L0</p>
+				</div>
+
+				<!-- COLUMN 3 -->
+				<div class="col col-lg-4">
+					<h2 class="text-white">Hours</h2>
+					<ul>
+						<li class="text-white">Monday: 7am – 5pm</li>
+						<li class="text-white">Tuesday: 7am – 5pm</li>
+						<li class="text-white">Wednesday: 7am – 5pm</li>
+						<li class="text-white">Thursday: 7am – 7pm</li>
+						<li class="text-white">Friday: 7am – 5pm</li>
+						<li class="text-white">Saturday: 9am – 5pm</li>
+						<li class="text-white">Sunday: 9am – 3pm</li>
+					</ul>
+				</div>
+
+			</div><!-- row ends -->
+
+		</div><!-- container ends -->
+	</footer>
+
+</body>
+</html>
